@@ -1,0 +1,88 @@
+{
+  "name": "transform",
+  "displayName": "transform json to ts type",
+  "description": "transform json to TypeScript interface for VS Code extension",
+  "version": "1.0.0",
+  "publisher": "transform",
+  "repository": "https://github.com/raotaohub/vscode-transform",
+  "engines": {
+    "vscode": "^1.5.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:typescript"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "transform.json.toTypeScript",
+        "title": "Json to Ts"
+      },
+      {
+        "command": "transform.jsonSschema.toTypeScript",
+        "title": "Json Schema to Ts"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "transform.json.toTypeScript",
+        "key": "ctrl+shift+alt+z",
+        "mac": "ctrl+shift+cmd+z",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "transform.jsonSschema.toTypeScript",
+        "key": "ctrl+shift+alt+x",
+        "mac": "ctrl+shift+cmd+x",
+        "when": "editorTextFocus"
+      }
+    ],
+    "submenus": [
+      {
+        "id": "transform/sub",
+        "label": "Transform Json"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "submenu": "transform/sub",
+          "group": "navigation"
+        }
+      ],
+      "transform/sub": [
+        {
+          "when": "editorFocus",
+          "command": "transform.json.toTypeScript",
+          "group": "transform_@1"
+        },
+        {
+          "when": "editorFocus",
+          "command": "transform.jsonSschema.toTypeScript",
+          "group": "transform_@2"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "lint": "eslint \"src/**/*.ts\"",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.34",
+    "@types/vscode": "^1.73.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.26.0",
+    "typescript": "^5.1.3"
+  },
+  "dependencies": {
+    "json-schema-to-typescript": "^10.1.4",
+    "typeof-sjsonc": "^1.0.6"
+  }
+}
