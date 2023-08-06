@@ -3,10 +3,15 @@
   "displayName": "transform json to ts type",
   "description": "transform json to TypeScript interface for VS Code extension",
   "version": "1.0.0",
-  "publisher": "transform",
-  "repository": "https://github.com/raotaohub/vscode-transform",
+  "publisher": "raotao",
+  "icon": "assets/jt.png",
+  "pricing": "Free",
   "engines": {
-    "vscode": "^1.5.0"
+    "vscode": "^1.75.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raotaohub/vscode-transform"
   },
   "categories": [
     "Other"
