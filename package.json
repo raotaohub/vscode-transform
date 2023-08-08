@@ -29,6 +29,10 @@
       {
         "command": "transform.jsonSschema.toTypeScript",
         "title": "Json Schema to Ts"
+      },
+      {
+        "command": "transform.javascript.toTypeScript",
+        "title": "Js to Ts"
       }
     ],
     "keybindings": [
@@ -42,6 +46,12 @@
         "command": "transform.jsonSschema.toTypeScript",
         "key": "ctrl+shift+alt+x",
         "mac": "ctrl+shift+cmd+x",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "transform.javascript.toTypeScript",
+        "key": "ctrl+shift+alt+c",
+        "mac": "ctrl+shift+cmd+c",
         "when": "editorTextFocus"
       }
     ],
@@ -68,6 +78,11 @@
           "when": "editorFocus",
           "command": "transform.jsonSschema.toTypeScript",
           "group": "transform_@2"
+        },
+        {
+          "when": "editorFocus",
+          "command": "transform.javascript.toTypeScript",
+          "group": "transform_@3"
         }
       ]
     }

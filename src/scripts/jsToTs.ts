@@ -4,7 +4,7 @@ import { typeofSjsonc } from "typeof-sjsonc";
 import Utils from "../utils";
 
 const disposable = vscode.commands.registerCommand(
-  Commands.JsonToTypeScript,
+  Commands.JsToTypeScript,
   async () => {
     // The code you place here will be executed every time your command is executed
 
@@ -13,7 +13,7 @@ const disposable = vscode.commands.registerCommand(
     try {
       const { start, end, word } = Utils.getEditorInfo();
 
-      const resultText = typeofSjsonc(word, "Root", {
+      const resultText = typeofSjsonc(Utils.jsObjectToJson(word), "Root", {
         disallowComments: false,
         separate: false,
         prefix: "I",

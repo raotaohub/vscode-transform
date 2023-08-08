@@ -15,7 +15,8 @@ export async function activate(context: vscode.ExtensionContext) {
   context.subscriptions.push(
     // The code you place here will be executed every time your command is executed
     require("./scripts/jsonToTs"),
-    require("./scripts/jsonSchemaToTs")
+    require("./scripts/jsonSchemaToTs"),
+    require("./scripts/jsToTs")
     // Display a message box to the user
   );
 }

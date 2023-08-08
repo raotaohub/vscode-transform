@@ -1,18 +1,13 @@
 import * as vscode from "vscode";
 import { Commands } from "../constants";
 import { compile } from "json-schema-to-typescript";
+import Utils from "../utils";
 
 const disposable = vscode.commands.registerCommand(
   Commands.JsonSschemaToTypeScript,
   async () => {
     try {
-      const editor = vscode.window.activeTextEditor;
-      const document = editor!.document;
-      const start = editor!.selection.start;
-      const end = editor!.selection.end;
-      const word = document.getText(
-        new vscode.Range(start.line, start.character, end.line, end.character)
-      );
+      const { start, end, word } = Utils.getEditorInfo();
 
       const parseWord = JSON.parse(word);
 
