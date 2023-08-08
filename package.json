@@ -1,8 +1,8 @@
 {
-  "name": "transform",
-  "displayName": "transform json to ts type",
+  "name": "transform-json",
+  "displayName": "transform json",
   "description": "transform json to TypeScript interface for VS Code extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "raotao",
   "icon": "assets/jt.png",
   "pricing": "Free",
