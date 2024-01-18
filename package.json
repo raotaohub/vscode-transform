@@ -7,7 +7,7 @@
   "icon": "assets/jt.png",
   "pricing": "Free",
   "engines": {
-    "vscode": "^1.75.0"
+    "vscode": "^1.6.0"
   },
   "repository": {
     "type": "git",

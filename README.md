@@ -1,6 +1,6 @@
 # Transform Json
 
-一款用于转换 `json` 数据到 `TypeScript interface` 的插件。
+一款用于转换 `json | js | json schema` 数据到 `TypeScript interface` 的插件。
 
 ## 功能
 
@@ -21,7 +21,7 @@
 #### 例如：
 
 ```json
-/** jsons chema对象**/
+/** jsons schema对象**/
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "type": "object", // 对象
